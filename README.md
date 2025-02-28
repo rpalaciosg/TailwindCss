@@ -38,3 +38,6 @@ Con estos estados y `peer` puedo hacer la funcionalidad de mostrar el mensaje de
 ## Diseño Responsive
 
 Como se debe comportar una pagina dependiendo del ancho de la misma. Se puede aplicar a varios elementos que se desen cambiar o modificar estilos segun el punto de quiebre sm:, md:, lg:, etc.
+
+## Flexbox
+

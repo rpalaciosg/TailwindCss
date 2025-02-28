@@ -6,19 +6,15 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-200: oklch(0.885 0.062 18.334);
-    --color-amber-200: oklch(0.924 0.12 95.746);
-    --color-blue-200: oklch(0.882 0.059 254.128);
-    --color-black: #000;
+    --color-red-500: oklch(0.637 0.237 25.331);
+    --color-red-600: oklch(0.577 0.245 27.325);
+    --color-blue-800: oklch(0.424 0.199 265.638);
+    --color-white: #fff;
     --spacing: 0.25rem;
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-bold: 700;
-    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -181,20 +177,14 @@
   .relative {
     position: relative;
   }
-  .mx-auto {
-    margin-inline: auto;
-  }
-  .mt-4 {
-    margin-top: calc(var(--spacing) * 4);
-  }
-  .mt-10 {
-    margin-top: calc(var(--spacing) * 10);
-  }
   .block {
     display: block;
   }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .hidden {
     display: none;
@@ -208,14 +198,14 @@
   .table {
     display: table;
   }
+  .h-\[600px\] {
+    height: 600px;
+  }
   .h-full {
     height: 100%;
   }
   .h-screen {
     height: 100vh;
-  }
-  .w-80 {
-    width: calc(var(--spacing) * 80);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -223,8 +213,35 @@
   .resize {
     resize: both;
   }
-  .rounded-md {
-    border-radius: var(--radius-md);
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-col-reverse {
+    flex-direction: column-reverse;
+  }
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+  .place-content-around {
+    place-content: space-around;
+  }
+  .place-content-between {
+    place-content: space-between;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .self-center {
+    align-self: center;
+  }
+  .self-end {
+    align-self: flex-end;
   }
   .border {
     border-style: var(--tw-border-style);
@@ -234,19 +251,8 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
-  .border-black {
-    border-color: var(--color-black);
-  }
-  .p-6 {
-    padding: calc(var(--spacing) * 6);
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
+  .border-blue-800 {
+    border-color: var(--color-blue-800);
   }
   .underline {
     text-decoration-line: underline;
@@ -255,53 +261,23 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .tablet\:bg-red-200 {
-    @media (width >= 900px) {
-      background-color: var(--color-red-200);
-    }
-  }
-  .sm\:bg-amber-200 {
-    @media (width >= 40rem) {
-      background-color: var(--color-amber-200);
-    }
-  }
-  .sm\:text-2xl {
-    @media (width >= 40rem) {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
-  .md\:bg-blue-200 {
-    @media (width >= 48rem) {
-      background-color: var(--color-blue-200);
-    }
-  }
-  .md\:text-2xl {
-    @media (width >= 48rem) {
-      font-size: var(--text-2xl);
-      line-height: var(--tw-leading, var(--text-2xl--line-height));
-    }
-  }
-  .lg\:w-96 {
-    @media (width >= 64rem) {
-      width: calc(var(--spacing) * 96);
-    }
-  }
-  .lg\:bg-red-200 {
-    @media (width >= 64rem) {
-      background-color: var(--color-red-200);
-    }
-  }
-  .lg\:text-3xl {
-    @media (width >= 64rem) {
-      font-size: var(--text-3xl);
-      line-height: var(--tw-leading, var(--text-3xl--line-height));
-    }
-  }
-  .xl\:flex {
-    @media (width >= 80rem) {
-      display: flex;
-    }
+}
+@layer components {
+  .card {
+    display: grid;
+    height: calc(var(--spacing) * 40);
+    width: calc(var(--spacing) * 40);
+    place-content: center;
+    border-radius: var(--radius-lg);
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+    border-color: var(--color-red-600);
+    background-color: var(--color-red-500);
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-white);
   }
 }
 @property --tw-border-style {
@@ -309,12 +285,12 @@
   inherits: false;
   initial-value: solid;
 }
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }
