@@ -23,3 +23,14 @@ Probando tailwindcss.
   > - peer-invalid:
 
 Con estos estados y `peer` puedo hacer la funcionalidad de mostrar el mensaje de validacion erronea o invalida de un input en un formulario.
+
+## Pseudoclases
+
+- after:
+> relative: utilidad usada para que las posiciones se tomen desde el elemento donde se aplica la clase.
+- placeholder:
+- `file:` es una pseudoclase especifica de los inputs de tipo file y dar estilo.
+- `marker:` dar estilos a las listas
+- `selection:` para cuando se selecciona texto en la pagina web
+- `first-line:` permite hacer cambios sobre la primera línea de un parrafo
+- `first-letter:` permite hacer cambios a la primera letra
