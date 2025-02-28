@@ -34,3 +34,7 @@ Con estos estados y `peer` puedo hacer la funcionalidad de mostrar el mensaje de
 - `selection:` para cuando se selecciona texto en la pagina web
 - `first-line:` permite hacer cambios sobre la primera línea de un parrafo
 - `first-letter:` permite hacer cambios a la primera letra
+
+## Diseño Responsive
+
+Como se debe comportar una pagina dependiendo del ancho de la misma. Se puede aplicar a varios elementos que se desen cambiar o modificar estilos segun el punto de quiebre sm:, md:, lg:, etc.
