@@ -12,8 +12,8 @@
       }
     </style>
   </head>
-  <body>
-    <h1 class="bg-orange-500 text-3xl font-bold underline --color-clifford">
+  <body class="bg-blue-400">
+    <!-- <h1 class="bg-orange-500 text-3xl font-bold underline --color-clifford">
       Hello world!
     </h1>
     <h2 class="bg-lime-600 text-white">Tailwindcss</h2>
@@ -31,6 +31,24 @@
     </div>
         <div class="h-[100px]">
           <div class="bg-pink-500 h-full">Medidas Tailwindcss</div>
-        </div>
+        </div> -->
+    <form action="" class="bg-white w-80 mx-auto mt-8 rounded-lg p-6">
+      <input class="border border-gray-300 w-full px-3 py-2 mb-4 rounded-md
+      disabled:bg-gray-200"
+      type="text" placeholder="Nombre" disabled>
+
+      <input class="border border-gray-300 w-full px-3 py-2 rounded-md
+      focus:outline-none focus:ring-1 focus:ring-purple-600 invalid:focus:ring-pink-500
+      peer"
+      type="email" placeholder="Correo">
+      <p class="text-pink-500 hidden peer-invalid:block">El correo es invalido.</p>
+
+      <input class="border border-gray-300 w-full px-3 py-2 mt-4 mb-4 rounded-md"
+      type="password" placeholder="Contraseña">
+
+      <input class="bg-blue-500 w-full py-2 text-white rounded-md cursor-pointer
+      hover:bg-blue-400"
+      type="submit" placeholder="Ingresar">
+    </form>
   </body>
 </html>
