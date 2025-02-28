@@ -1,3 +1,5 @@
 # TailwindCss
 
 Probando tailwindcss.
+
+## Colores
