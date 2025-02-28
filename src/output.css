@@ -193,6 +193,9 @@
   .block {
     display: block;
   }
+  .flex {
+    display: flex;
+  }
   .hidden {
     display: none;
   }
@@ -293,6 +296,11 @@
     @media (width >= 64rem) {
       font-size: var(--text-3xl);
       line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
+  }
+  .xl\:flex {
+    @media (width >= 80rem) {
+      display: flex;
     }
   }
 }
