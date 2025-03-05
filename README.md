@@ -41,3 +41,6 @@ Como se debe comportar una pagina dependiendo del ancho de la misma. Se puede ap
 
 ## Flexbox
 
+## CSS Grid
+
+## Dark Mode
